@@ -3,8 +3,9 @@ body {
   padding: 0;
   background: rgb(226,0,255);
   background: -webkit-linear-gradient(90deg, #151515, rgb(0, 0, 95));
+  
   min-height: 100vh;
-
+  
 }
 
 h1 {
@@ -13,11 +14,11 @@ h1 {
 }
 h2 {
 
-  font-size: 2.5vw;
+  font-size: 3vw;
 }
 
 p {
-  font-size: 1.0vw;
+  font-size: 1.5vw;
 }
 
 #ApiCard {
@@ -34,6 +35,8 @@ font-family: Genos;
 
 .left-pannel{
   width: 50%;
+  display: flex;
+  align-items: center;
   
 }
 .right-pannel{
@@ -145,18 +148,21 @@ font-family: Genos 300;
 }
 
 
-@media(max-width: 650px){
+@media(max-width: 700px){
   .search-box{
     min-width: 15rem;
     margin: 1%;
   }
 
   h1{
-    font-size: 6.5vw;
+    font-size: 7vw;
   }
 
   h2{
     font-size: 5vw;
+  }
+  p {
+    font-size: 4.0vw;
   }
 
   #ApiCard{
@@ -165,20 +171,29 @@ font-family: Genos 300;
     align-items: center;
   
   }
+  #PlanetIMG{
+    max-height: 80%;
+    max-width: 80%;
+    border-radius: 10px 10px 10px 10px;
+    opacity: .8;
+   }
 
   .right-pannel{
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
   }
 
   .left-pannel{
     width: 100%;
+    justify-content: center;
   }
 
   #SearchCard{
     width: 95%;
   
   }
+
+ 
 }
 
 
