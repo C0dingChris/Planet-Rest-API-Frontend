@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(226,0,255);
+  background: -webkit-linear-gradient(90deg, #151515, rgb(0, 0, 95));
+  min-height: 100vh;
+
+}
+
+h1 {
+
+  font-size: 4vw;
+}
+h2 {
+
+  font-size: 2.5vw;
+}
+
+p {
+  font-size: 1.0vw;
+}
+
+#ApiCard {
+
+min-height: 22rem;
+width: 50%;
+display: flex;
+flex-direction: row-reverse;
+margin: auto;
+margin-bottom: 2rem;
+border-radius: 15px;
+font-family: Genos;
+}
+
+.left-pannel{
+  width: 50%;
+  
+}
+.right-pannel{
+    width: 50%;
+    background-color: white;
+    color: blue;
+    border-radius: 15px 15px 15px 15px;
+
+}
+
+#SearchCard {
+background-color: rgba(54, 48, 232, 0.439);
+min-height: 12rem;
+text-align: center;
+margin: auto;
+margin-top: 1rem;
+margin-bottom: 1rem;
+width: 50%;
+border-radius: 15px;
+font-family: Genos 300;
+}
+
+.data-wrapper{
+  background-color: rgba(92, 102, 235, 0.325);
+  border-radius: 10px;
+  margin: 1rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+
+  padding: .5rem;
+}
+#ApiTitle{
+  margin: 8px;
+  padding: 5%;
+  font-weight: bold;
+  font-family: Genos;
+  color: white;
+}
+
+#PlanetHere{
+    margin: 1rem;
+    font-weight: bold;
+    text-align: center;
+
+}
+ #PlanetIMG{
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 10px 0px 0px 10px;
+  opacity: .8;
+ }
+
+
+.Next-button {
+  background-color: rgb(0, 0, 0); 
+  border: none;
+  color: white;
+  text-align: center;
+  font-family: Genos 300;
+  font-size: 16px;
+  width: 20rem;
+  height: 2rem;
+  border-radius: 10px;
+
+}
+
+.Next-button:hover {
+  background-color: rgba(0, 0, 0, 0.474); 
+  color: white;
+  cursor: pointer;
+
+}
+
+#Button-Container {
+
+
+width: 90%;
+padding: 5%;
+border-radius: 15px;
+
+
+}
+
+.button-search{
+
+width: 4rem;
+height: 2rem;
+background-color: black; 
+color: white;
+border-radius: 10px;
+cursor: pointer;
+border: none;
+font-family: Genos 300;
+
+}
+.button-search:hover{
+  background-color: rgba(0, 0, 0, 0.468);
+}
+
+.search-box {
+  min-width: 15rem;
+  min-height: 2rem;
+  border-radius: 10px;
+  background-color: white;
+  border: none;
+  color: black;
+  text-align: center;
+}
+
+
+@media(max-width: 650px){
+  .search-box{
+    min-width: 15rem;
+    margin: 1%;
+  }
+
+  h1{
+    font-size: 6.5vw;
+  }
+
+  h2{
+    font-size: 5vw;
+  }
+
+  #ApiCard{
+    width: 95%;
+    flex-direction: column-reverse;
+    align-items: center;
+  
+  }
+
+  .right-pannel{
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .left-pannel{
+    width: 100%;
+  }
+
+  #SearchCard{
+    width: 95%;
+  
+  }
+}
+
+
+
