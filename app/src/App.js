@@ -12,7 +12,7 @@ const landingPage = [{
 
 
 function App() {
-  const [planets, setPlanetState] = useState("Test");
+  const [planets, setPlanetState] = useState(landingPage);
   async function fetchPlanetData() {
     const response = await fetch("http://localhost:3500/random");
     let data = await response.json();
