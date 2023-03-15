@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: rgb(226,0,255);
-  background: -webkit-linear-gradient(90deg, #151515, rgb(0, 0, 95));
+  background: -webkit-linear-gradient(90deg, #101010, rgb(0, 0, 95));
   
   min-height: 100vh;
   

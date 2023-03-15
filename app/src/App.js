@@ -17,7 +17,9 @@ const landingPage = [
 function App() {
   const [planets, setPlanetState] = useState(landingPage);
   async function fetchPlanetData() {
-    const response = await fetch("http://localhost:3500/random");
+    const response = await fetch(
+      "https://planet-rest-api-backend.onrender.com/"
+    );
     let data = await response.json();
     setPlanetState(data.payload);
     console.log("clicked");
