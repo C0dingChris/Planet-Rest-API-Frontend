@@ -1,8 +1,8 @@
 import React from "react";
 import "../../App.css";
 
-export default function Searchcard(props) {
-  console.log("Props:", props);
+export default function Searchcard({ fetchPlanetData }) {
+
   return (
     <div id="SearchCard">
       <h1 id="ApiTitle">Planets.REST</h1>
@@ -14,7 +14,7 @@ export default function Searchcard(props) {
       ></input>
       <button className="button-search">Search</button>
       <div id="Button-Container">
-        <button onClick={props.fetchPlanetData} className="Next-button">
+        <button onClick={fetchPlanetData()} className="Next-button">
           Random Planet
         </button>
       </div>
