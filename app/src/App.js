@@ -16,6 +16,9 @@ const landingPage = [
 
 function App() {
   const [planets, setPlanetState] = useState(landingPage);
+  const [searchTerm, setSearchTerm] = useState("")
+
+
   async function fetchPlanetData() {
     const response = await fetch(
       "https://planet-rest-api-backend.onrender.com/random"
@@ -26,28 +29,39 @@ function App() {
     console.log(planets);
   }
 
-  // function handleClick() {
-  //   console.log("ffs");
-  // }
+async function handleSearch(event) {
+  console.log ("Started search")
+ event.preventDefault();
+ const response = await fetch(`https://planet-rest-api-backend.onrender.com/search?planet=${searchTerm}`) ;
+  let data = await response.json();
+  setPlanetState(data.payload);
+  console.log(data.payload)
+}
 
   console.log("Planets:", planets);
+  //console.log(event.target.value)
 
   return (
     <div>
       <div id="SearchCard">
         <h1 id="ApiTitle">Planets.REST</h1>
+        <form onSubmit={handleSearch}>
         <input
           className="search-box"
           type="text"
           placeholder="Search.."
           name="search"
-        ></input>
+          onChange={(event)=>setSearchTerm(event.target.value)}
+          
+        ></input> 
         <button className="button-search">Search</button>
         <div id="Button-Container">
-          <button onClick={fetchPlanetData} className="Next-button">
+          <button onClick={fetchPlanetData} className="Next-button" type="submit">
             Random Planet
           </button>
+          
         </div>
+        </form>
       </div>
       <div id="ApiCard">
         <div className="right-pannel">
